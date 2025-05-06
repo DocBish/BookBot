@@ -9,6 +9,13 @@ def main():
     text=get_book_text("books/frankenstein.txt")
     nWords=get_nWords(text)
     nChar=get_nChar(text)
-    print(f"{nWords} words found in the document")
-    print(nChar)
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at books/frankenstein.txt...")
+    print("----------- Word Count ----------")
+    print(f"Found {nWords} total words")
+    print("--------- Character Count -------")
+    for i in nChar:
+        if i["char"].isalpha() is True:
+            print(f"{i["char"]}: {i["num"]}")
+    print("============= END ===============")
 main()
